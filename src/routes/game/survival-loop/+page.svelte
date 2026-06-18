@@ -28,8 +28,12 @@
 		state = 'playing';
 		const { app, cleanup: appCleanup } = await initApp(containerEl, 0x1a2a1a);
 
-		await Assets.load(Object.values(survivalSpriteUrls));
-		const tex = Object.fromEntries(Object.entries(survivalSpriteUrls).map(function ([key, url]) {
+		const skipPrefix = selectedGender === 'male' ? 'heroFemale' : 'heroMale';
+		const filteredEntries = Object.entries(survivalSpriteUrls).filter(function ([key]) {
+			return !key.startsWith(skipPrefix);
+		});
+		await Assets.load(filteredEntries.map(function ([, url]) { return url; }));
+		const tex = Object.fromEntries(filteredEntries.map(function ([key, url]) {
 			return [key, Texture.from(url)];
 		})) as Record<SurvivalSpriteKey, Texture>;
 
