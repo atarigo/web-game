@@ -131,7 +131,7 @@
 				<div class="char-pick">
 					<button class="char-card" class:selected={selectedGender === 'male'} onclick={() => pickGender('male')}>
 						<div class="char-frame">
-							<img src={survivalSpriteUrls.heroDownIdle} alt="男主角" class="char-img" />
+							<img src={survivalSpriteUrls.heroMaleDownIdle} alt="男主角" class="char-img" />
 						</div>
 						<span class="char-name">ㄅ</span>
 					</button>

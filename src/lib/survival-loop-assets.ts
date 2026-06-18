@@ -1,6 +1,7 @@
 const assetModules = import.meta.glob(
   [
     "./assets/survival-loop/*.png",
+    "./assets/survival-loop/*.webp",
     "!./assets/survival-loop/*generated-sheet.png",
   ],
   {
@@ -12,7 +13,7 @@ const assetModules = import.meta.glob(
 
 function toSpriteKey(path: string) {
   const fileName = path.split("/").pop() ?? "";
-  const baseName = fileName.replace(/\.png$/, "");
+  const baseName = fileName.replace(/\.(png|webp)$/, "");
   return baseName.replace(/-([a-z0-9])/g, function (_, char: string) {
     return char.toUpperCase();
   });
