@@ -61,22 +61,47 @@
 ```
 spec/index.md           — 本文件，專案總覽
 spec/<game-name>.md     — 各遊戲的獨立規格書
+spec/product/           — 產品方向、黏著力、營收、法遵（跨遊戲的長期規劃）
+spec/art/               — 美術管線、動畫合約、素材需求清單
 ```
 
 新增或修改遊戲時，必須同步更新對應的規格文件。
 
+### 現況與進度
+
+| 編號 | 文件                   | 內容                                         |
+| ---- | ---------------------- | -------------------------------------------- |
+| 1    | [status.md](status.md) | 專案現況、路由狀態、合作與驗收方式、進度待辦 |
+
+### 產品與美術文件
+
+| 編號 | 文件                                                                               | 內容                             |
+| ---- | ---------------------------------------------------------------------------------- | -------------------------------- |
+| 1    | [product/overview.md](product/overview.md)                                         | 產品方向總覽                     |
+| 2    | [product/retention.md](product/retention.md)                                       | 黏著力設計                       |
+| 3    | [product/monetization.md](product/monetization.md)                                 | 營收與金流                       |
+| 4    | [product/compliance.md](product/compliance.md)                                     | 法律、著作權、法遵注意事項       |
+| 5    | [art/ooxx-animation-plan.md](art/ooxx-animation-plan.md)                           | 美術管線與動畫合約               |
+| 6    | [art/sprite-review-tool.md](art/sprite-review-tool.md)                             | 精靈圖審查工具與驗收流程         |
+| 7    | [art/forest-camp-art-order-directions.md](art/forest-camp-art-order-directions.md) | 角色方向補圖委託單（已執行完）   |
+| 8    | [art/forest-camp-art-order.md](art/forest-camp-art-order.md)                       | 場景補件委託單（已執行完）       |
+| 9    | [art/survival-loop-restyle.md](art/survival-loop-restyle.md)                       | 早期評估文件（歷史參考）         |
+| 10   | [art/coco-island-art-order.md](art/coco-island-art-order.md)                       | Coco Island 第一批委託單（作廢） |
+| 11   | [art/coco-island-art-order-2.md](art/coco-island-art-order-2.md)                   | Coco Island 第二批委託單（作廢） |
+
 ## 遊戲清單
 
-| 路由                  | 規格文件                             | 說明                 | 技術               |
-| --------------------- | ------------------------------------ | -------------------- | ------------------ |
-| `/game/pull-the-pin`  | [pull-the-pin.md](pull-the-pin.md)   | 拔釘子讓水流到杯子   | PixiJS + Matter.js |
-| `/game/hero-rescue`   | [hero-rescue.md](hero-rescue.md)     | 選對道具救英雄       | PixiJS             |
-| `/game/number-merge`  | [number-merge.md](number-merge.md)   | 丟數字球合併到 2048  | PixiJS + Matter.js |
-| `/game/parking-jam`   | [parking-jam.md](parking-jam.md)     | 滑動車輛讓紅車離開   | PixiJS             |
-| `/game/stick-hero`    | [stick-hero.md](stick-hero.md)       | 長按伸棍搭橋過平台   | PixiJS             |
-| `/game/ball-sort`     | [ball-sort.md](ball-sort.md)         | 同色球分到同一管     | PixiJS             |
-| `/game/money-run`     | [money-run.md](money-run.md)         | 穿過乘法門累積金幣   | PixiJS             |
-| `/game/bug-squash`    | [bug-squash.md](bug-squash.md)       | 30 秒內消滅蟲子      | PixiJS             |
-| `/game/fish-hook`     | [fish-hook.md](fish-hook.md)         | 放魚鉤釣魚得分       | PixiJS             |
-| `/game/tower-stack`   | [tower-stack.md](tower-stack.md)     | 對準疊方塊疊高塔     | PixiJS             |
-| `/game/survival-loop` | [survival-loop.md](survival-loop.md) | 砍柴打獵賺錢升級營地 | PixiJS             |
+| 路由                  | 規格文件                             | 說明                                       | 技術               |
+| --------------------- | ------------------------------------ | ------------------------------------------ | ------------------ |
+| `/game/pull-the-pin`  | [pull-the-pin.md](pull-the-pin.md)   | 拔釘子讓水流到杯子                         | PixiJS + Matter.js |
+| `/game/hero-rescue`   | [hero-rescue.md](hero-rescue.md)     | 選對道具救英雄                             | PixiJS             |
+| `/game/number-merge`  | [number-merge.md](number-merge.md)   | 丟數字球合併到 2048                        | PixiJS + Matter.js |
+| `/game/parking-jam`   | [parking-jam.md](parking-jam.md)     | 滑動車輛讓紅車離開                         | PixiJS             |
+| `/game/stick-hero`    | [stick-hero.md](stick-hero.md)       | 長按伸棍搭橋過平台                         | PixiJS             |
+| `/game/ball-sort`     | [ball-sort.md](ball-sort.md)         | 同色球分到同一管                           | PixiJS             |
+| `/game/money-run`     | [money-run.md](money-run.md)         | 穿過乘法門累積金幣                         | PixiJS             |
+| `/game/bug-squash`    | [bug-squash.md](bug-squash.md)       | 30 秒內消滅蟲子                            | PixiJS             |
+| `/game/fish-hook`     | [fish-hook.md](fish-hook.md)         | 放魚鉤釣魚得分                             | PixiJS             |
+| `/game/tower-stack`   | [tower-stack.md](tower-stack.md)     | 對準疊方塊疊高塔                           | PixiJS             |
+| `/game/survival-loop` | [survival-loop.md](survival-loop.md) | 砍柴打獵賺錢升級營地                       | PixiJS             |
+| `/game/forest-camp`   | [forest-camp.md](forest-camp.md)     | 砍樹獵熊賺錢轉生（開發中，用 ooxx 精靈圖） | PixiJS             |
