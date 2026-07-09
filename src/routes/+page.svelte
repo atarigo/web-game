@@ -1,9 +1,30 @@
 <script lang="ts">
 	const games: { slug: string; name: string; description: string }[] = [
+		{ slug: 'pull-the-pin', name: '拔釘子', description: '拔對釘子，讓水流進杯子裡！' },
+		{ slug: 'hero-rescue', name: '英雄救援', description: '選對道具，救出被困的英雄！' },
+		{ slug: 'number-merge', name: '數字合併', description: '丟數字球，一路合併到 2048！' },
+		{ slug: 'parking-jam', name: '停車場塞車', description: '滑動車輛，讓紅車開出停車場！' },
+		{ slug: 'stick-hero', name: '伸棍英雄', description: '長按伸棍搭橋，跨越平台！' },
+		{ slug: 'ball-sort', name: '彩球分類', description: '把同色球分進同一根管子！' },
+		{ slug: 'money-run', name: '金錢快跑', description: '穿過乘法門，金幣越滾越多！' },
+		{ slug: 'bug-squash', name: '打蟲大戰', description: '30 秒內消滅所有蟲子！' },
+		{ slug: 'fish-hook', name: '釣魚高手', description: '瞄準放鉤，釣大魚拿高分！' },
+		{ slug: 'tower-stack', name: '疊塔', description: '對準時機放方塊，疊出高塔！' },
 		{ slug: 'survival-loop', name: '末日生存', description: '砍柴、打獵、賺錢、升級營地！' },
+		{ slug: 'forest-camp', name: '森林營地', description: '砍樹、獵熊、賺錢、轉生！（開發中）' },
 	];
-	const upcoming = [
-		{ name: '???', description: 'Coming soon...' },
+	const devLinks: { href: string; name: string; description: string }[] = [
+		{
+			href: '/demo/sprites?pack=forest-camp',
+			name: '素材審查：森林營地',
+			description: '角色方向補圖與場景圖審查包',
+		},
+		{
+			href: '/demo/sprites?pack=ooxx',
+			name: '素材審查：ooxx',
+			description: '通用審查頁載入 ooxx 素材包',
+		},
+		{ href: '/demo/ooxx', name: 'ooxx 原審查頁', description: '昨晚 ooxx 素材的原始審查頁' },
 	];
 </script>
 
@@ -28,19 +49,27 @@
 						<a href="/game/{game.slug}" class="game-card">
 							<span class="game-name">{game.name}</span>
 							<span class="game-desc">{game.description}</span>
+							<span class="game-path">/game/{game.slug}</span>
 						</a>
-					</li>
-				{/each}
-				{#each upcoming as item}
-					<li>
-						<div class="game-card disabled">
-							<span class="game-name">{item.name}</span>
-							<span class="game-desc">{item.description}</span>
-						</div>
 					</li>
 				{/each}
 			</ul>
 		{/if}
+	</section>
+
+	<section class="games">
+		<h2 class="section-title">DEMO / DEV</h2>
+		<ul class="game-list">
+			{#each devLinks as link}
+				<li>
+					<a href={link.href} class="game-card">
+						<span class="game-name">{link.name}</span>
+						<span class="game-desc">{link.description}</span>
+						<span class="game-path">{link.href}</span>
+					</a>
+				</li>
+			{/each}
+		</ul>
 	</section>
 	<a href="/records" class="records-link">📋 成績記錄</a>
 	<span class="version">v0.2.1</span>
@@ -150,15 +179,17 @@
 		transition: border-color 0.2s, box-shadow 0.2s;
 	}
 
-	.game-card:hover:not(.disabled) {
+	.game-card:hover {
 		border-color: rgba(200, 175, 140, 0.4);
 		box-shadow: 0 0 16px rgba(180, 120, 60, 0.1);
 	}
 
-	.game-card.disabled {
-		opacity: 0.35;
-		cursor: default;
-		border-color: rgba(180, 160, 130, 0.08);
+	.section-title {
+		font-family: 'Audiowide', sans-serif;
+		font-size: 1rem;
+		color: var(--neon-yellow);
+		letter-spacing: 0.15em;
+		margin-bottom: 0.8rem;
 	}
 
 	.game-name {
@@ -173,6 +204,14 @@
 		margin-top: 0.3rem;
 		font-size: 0.85rem;
 		color: var(--text-muted);
+	}
+
+	.game-path {
+		display: block;
+		margin-top: 0.4rem;
+		font-family: monospace;
+		font-size: 0.75rem;
+		color: rgba(255, 255, 255, 0.35);
 	}
 
 	.records-link {
