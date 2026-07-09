@@ -1,0 +1,56 @@
+{
+  "id": "forest_edge",
+  "size": [2048, 1152],
+  "layers": [
+    {
+      "id": "sky",
+      "file": "forest_edge_sky.png",
+      "alpha": false,
+      "parallax": 0.15
+    },
+    {
+      "id": "far",
+      "file": "forest_edge_far.png",
+      "alpha": true,
+      "parallax": 0.35
+    },
+    {
+      "id": "mid",
+      "file": "forest_edge_mid.png",
+      "alpha": true,
+      "parallax": 0.65
+    },
+    {
+      "id": "ground_base",
+      "file": "forest_edge_ground_base.png",
+      "alpha": false,
+      "parallax": 1
+    },
+    {
+      "id": "ground_detail",
+      "file": "forest_edge_ground_detail.png",
+      "alpha": true,
+      "parallax": 1
+    },
+    {
+      "id": "foreground",
+      "file": "forest_edge_foreground.png",
+      "alpha": true,
+      "parallax": 1.08
+    }
+  ],
+  "collision": [
+    {
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 250,
+      "tag": "far_backdrop"
+    }
+  ],
+  "spawns": {
+    "player": [{ "x": 1024, "y": 760 }],
+    "bear": [{ "x": 1320, "y": 710 }]
+  }
+}

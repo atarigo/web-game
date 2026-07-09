@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "packs": [
+    {
+      "id": "ooxx",
+      "label": "OOXX",
+      "manifest": "/demo/ooxx/ooxx-art-manifest.json"
+    },
+    {
+      "id": "forest-camp",
+      "label": "Forest Camp (補件)",
+      "manifest": "/demo/sprites/forest-camp/manifest.json"
+    }
+  ]
+}

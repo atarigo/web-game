@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "assetRoot": "/demo/sprites/forest-camp",
+  "frameContracts": {
+    "hero": {
+      "canvas": [256, 256],
+      "anchor": [128, 220],
+      "baselineY": 220,
+      "visualHeight": [150, 170],
+      "directions": ["down", "left", "right", "up"]
+    }
+  },
+  "animations": {
+    "hero": {
+      "idle": {
+        "durations": [0.18, 0.18, 0.22, 0.18],
+        "frames": 4
+      },
+      "walk": {
+        "durations": [0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+        "frames": 6
+      },
+      "attack_1": {
+        "durations": [0.07, 0.07, 0.06, 0.06, 0.08, 0.12],
+        "hitFrame": 3,
+        "frames": 6
+      }
+    }
+  },
+  "reviewBatch": [
+    {
+      "id": "male_axe",
+      "kind": "hero",
+      "basePath": "/demo/sprites/forest-camp",
+      "actions": [
+        "idle_left",
+        "idle_right",
+        "idle_up",
+        "walk_left",
+        "walk_right",
+        "walk_up",
+        "attack_1_left",
+        "attack_1_right",
+        "attack_1_up"
+      ]
+    },
+    {
+      "id": "female_axe",
+      "kind": "hero",
+      "basePath": "/demo/sprites/forest-camp",
+      "actions": [
+        "idle_left",
+        "idle_right",
+        "idle_up",
+        "walk_left",
+        "walk_right",
+        "walk_up",
+        "attack_1_left",
+        "attack_1_right",
+        "attack_1_up"
+      ]
+    }
+  ],
+  "statics": [
+    {
+      "id": "tree_full",
+      "file": "tree_full.png",
+      "canvas": [256, 384],
+      "anchor": [128, 360]
+    },
+    {
+      "id": "tree_damaged",
+      "file": "tree_damaged.png",
+      "canvas": [256, 384],
+      "anchor": [128, 360]
+    },
+    {
+      "id": "tree_stump",
+      "file": "tree_stump.png",
+      "canvas": [256, 384],
+      "anchor": [128, 360]
+    },
+    {
+      "id": "item_wood",
+      "file": "item_wood.png",
+      "canvas": [128, 128],
+      "anchor": [64, 64]
+    },
+    {
+      "id": "item_meat",
+      "file": "item_meat.png",
+      "canvas": [128, 128],
+      "anchor": [64, 64]
+    },
+    {
+      "id": "item_bento",
+      "file": "item_bento.png",
+      "canvas": [128, 128],
+      "anchor": [64, 64]
+    },
+    {
+      "id": "item_coin",
+      "file": "item_coin.png",
+      "canvas": [128, 128],
+      "anchor": [64, 64]
+    },
+    {
+      "id": "station_wood",
+      "file": "station_wood.png",
+      "canvas": [256, 256],
+      "anchor": [128, 230]
+    },
+    {
+      "id": "station_meat",
+      "file": "station_meat.png",
+      "canvas": [256, 256],
+      "anchor": [128, 230]
+    },
+    {
+      "id": "station_bento",
+      "file": "station_bento.png",
+      "canvas": [256, 256],
+      "anchor": [128, 230]
+    },
+    {
+      "id": "map_topdown",
+      "file": "map_topdown.png",
+      "canvas": [2048, 2048],
+      "anchor": [0, 0]
+    }
+  ]
+}

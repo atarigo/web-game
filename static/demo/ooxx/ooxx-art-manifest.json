@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-01",
+  "route": "/demo/ooxx",
+  "assetRoot": "/demo/ooxx/final",
+  "rules": {
+    "reviewFormat": "transparent PNG per frame",
+    "runtimeFormat": "sprite atlas plus metadata after approval",
+    "noTouchPaths": [
+      "src/routes/game/survival-loop",
+      "src/lib/assets/survival-loop"
+    ],
+    "temporaryOutputPolicy": "Keep generated or transitional files outside static/demo/ooxx/final."
+  },
+  "frameContracts": {
+    "character": {
+      "canvas": [256, 256],
+      "anchor": [128, 220],
+      "baselineY": 220,
+      "visualHeight": [150, 170],
+      "directions": ["down", "left", "right", "up"]
+    },
+    "bear": {
+      "canvas": [320, 256],
+      "anchor": [160, 220],
+      "baselineY": 220,
+      "visualHeight": [140, 170],
+      "directions": ["down", "left", "right", "up"]
+    }
+  },
+  "animations": {
+    "character": {
+      "idle": { "frames": 4, "durations": [0.18, 0.18, 0.22, 0.18] },
+      "walk": { "frames": 6, "durations": [0.1, 0.1, 0.1, 0.1, 0.1, 0.1] },
+      "attack_1": {
+        "frames": 6,
+        "durations": [0.07, 0.07, 0.06, 0.06, 0.08, 0.12],
+        "hitFrame": 3
+      },
+      "hit": { "frames": 3, "durations": [0.08, 0.08, 0.12] },
+      "death": {
+        "frames": 8,
+        "durations": [0.1, 0.1, 0.1, 0.12, 0.12, 0.15, 0.18, 999]
+      },
+      "run": {
+        "frames": 6,
+        "durations": [0.075, 0.075, 0.075, 0.075, 0.075, 0.075],
+        "optional": true
+      },
+      "attack_2": {
+        "frames": 8,
+        "durations": [0.06, 0.06, 0.06, 0.05, 0.05, 0.07, 0.08, 0.12],
+        "hitFrame": 4,
+        "optional": true
+      },
+      "skill_cast": {
+        "frames": 6,
+        "durations": [0.08, 0.08, 0.08, 0.08, 0.08, 0.08],
+        "optional": true
+      },
+      "dodge": {
+        "frames": 4,
+        "durations": [0.06, 0.06, 0.06, 0.06],
+        "optional": true
+      },
+      "victory": {
+        "frames": 6,
+        "durations": [0.12, 0.12, 0.12, 0.12, 0.12, 0.12],
+        "optional": true
+      }
+    },
+    "bear": {
+      "idle": { "frames": 4, "durations": [0.2, 0.2, 0.2, 0.2] },
+      "walk": {
+        "frames": 6,
+        "durations": [0.11, 0.11, 0.11, 0.11, 0.11, 0.11]
+      },
+      "attack_claw": {
+        "frames": 6,
+        "durations": [0.08, 0.07, 0.06, 0.07, 0.09, 0.14],
+        "hitFrame": 3
+      },
+      "hit": { "frames": 3, "durations": [0.08, 0.08, 0.08] },
+      "death": {
+        "frames": 8,
+        "durations": [0.1, 0.1, 0.1, 0.12, 0.12, 0.15, 0.18, 999]
+      },
+      "roar": {
+        "frames": 6,
+        "durations": [0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+        "optional": true
+      }
+    }
+  },
+  "firstReviewBatch": [
+    {
+      "id": "male_axe",
+      "label": "Male / Axe",
+      "kind": "character",
+      "basePath": "/demo/ooxx/final/characters/male/axe",
+      "actions": ["idle_down", "walk_down", "attack_1_down"]
+    },
+    {
+      "id": "female_axe",
+      "label": "Female / Axe",
+      "kind": "character",
+      "basePath": "/demo/ooxx/final/characters/female/axe",
+      "actions": ["idle_down", "walk_down", "attack_1_down"]
+    },
+    {
+      "id": "bear",
+      "label": "Bear",
+      "kind": "bear",
+      "basePath": "/demo/ooxx/final/creatures/bear",
+      "actions": ["idle_down", "walk_down", "attack_claw_down"]
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "forest_edge",
+      "label": "Forest Edge",
+      "size": [2048, 1152],
+      "basePath": "/demo/ooxx/final/backgrounds/forest-edge",
+      "layers": [
+        { "id": "sky", "file": "forest_edge_sky.png", "alpha": false },
+        { "id": "far", "file": "forest_edge_far.png", "alpha": true },
+        { "id": "mid", "file": "forest_edge_mid.png", "alpha": true },
+        {
+          "id": "ground_base",
+          "file": "forest_edge_ground_base.png",
+          "alpha": false
+        },
+        {
+          "id": "ground_detail",
+          "file": "forest_edge_ground_detail.png",
+          "alpha": true
+        },
+        {
+          "id": "foreground",
+          "file": "forest_edge_foreground.png",
+          "alpha": true
+        }
+      ],
+      "metadata": "forest_edge.scene.json"
+    }
+  ]
+}
